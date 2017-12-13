@@ -24,10 +24,10 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="blocking_queue.h">
+    <ClInclude Include="queue.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="queue.h">
+    <ClInclude Include="blocking_queue_cruise.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,10 +35,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="blocking_queue.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="blocking_queue_cruise.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

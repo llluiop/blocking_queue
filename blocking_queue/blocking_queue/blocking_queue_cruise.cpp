@@ -2,21 +2,21 @@
 //
 
 #include "stdafx.h"
-#include "blocking_queue.h"
+#include "blocking_queue_cruise.h"
 #include <thread>
 #include <iostream>
 using namespace std;
 
 
-blocking_queue::blocking_queue()
+blocking_queue_cruise::blocking_queue_cruise()
 {
 }
 
-blocking_queue::~blocking_queue()
+blocking_queue_cruise::~blocking_queue_cruise()
 {
 }
 
-void blocking_queue::put(int x)
+void blocking_queue_cruise::put(int x)
 {
 	while (true)
 	{
@@ -35,7 +35,7 @@ void blocking_queue::put(int x)
 
 }
 
-int blocking_queue::take()
+int blocking_queue_cruise::take()
 {
 	while (true)
 	{
@@ -51,4 +51,10 @@ int blocking_queue::take()
 
 		std::this_thread::sleep_for(std::chrono::seconds(1));
 	}
+}
+
+bool blocking_queue_cruise::empty()
+{
+	lock_guard<std::mutex> lck(m_);
+	return q_.empty();
 }
