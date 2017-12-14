@@ -1,15 +1,18 @@
 #include "blocking_queue_cruise.h"
+#include "blocking_queue_condition.h"
 #include <thread>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
 int main()
 {
-	blocking_queue_cruise queue;
+	//blocking_queue_cruise queue;
+	blocking_queue_condition queue;
 	std::vector<std::thread> put_threads_;
 	std::vector<std::thread> take_threads_;
-	//vector<std::thread> vec;
+
 
 	for (int i = 0; i < 10; i++)
 	{
@@ -52,7 +55,7 @@ int main()
 		v.join();
 	}
 
-	auto b = queue.empty();
+	cout << queue.empty() << endl;
 
 	return getchar();
 }

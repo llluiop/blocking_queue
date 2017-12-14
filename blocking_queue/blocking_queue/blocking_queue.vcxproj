@@ -149,12 +149,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="blocking_queue_condition.h" />
     <ClInclude Include="blocking_queue_cruise.h" />
     <ClInclude Include="queue.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="blocking_queue_condition.cpp" />
     <ClCompile Include="blocking_queue_cruise.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
